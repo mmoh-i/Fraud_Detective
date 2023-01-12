@@ -30,6 +30,7 @@ div.all {
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
+  margin: 5px;
 }
 
 .form-body [type="text"]::hover,
@@ -44,4 +45,11 @@ input[type=submit]{
     width: 30%;
     margin-top: 20px;
     height: 50px;
+}
+
+
+@media screen and (max-width:700px){
+  .form-container{
+    margin: 50px;
+  }
 }

@@ -13,8 +13,7 @@ class User(UserMixin, db.Model):
 
 class Text(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    messages = db.Column(db.String(10000))
+    message = db.Column(db.String(10000), nullable=True)
     date = db.Column(db.DateTime(timezone=True), default=func.now())
-    message_source = db.Column(db.String(45))
-    fraudlent = db.Column(db.String(45))
+    message_source = db.Column(db.String(45), nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
